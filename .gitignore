@@ -1,4 +1,7 @@
 *.py[cod]
+*[~#]
+.python-version
+db.sqlite3
 __pycache__
 
 # C extensions
