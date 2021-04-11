@@ -2,21 +2,21 @@
 SOATO Registry
 =============================
 
-.. image:: https://badge.fury.io/py/soato_registry.svg
-    :target: https://badge.fury.io/py/soato_registry
+.. image:: https://badge.fury.io/py/uzsoato_registry.svg
+    :target: https://badge.fury.io/py/uzsoato_registry
 
-.. image:: https://travis-ci.org/dcopm999/soato_registry.svg?branch=master
-    :target: https://travis-ci.org/dcopm999/soato_registry
+.. image:: https://travis-ci.com/dcopm999/uzsoato_registry.svg?branch=master
+    :target: https://travis-ci.com/dcopm999/uzsoato_registry
 
-.. image:: https://codecov.io/gh/dcopm999/soato_registry/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/dcopm999/soato_registry
+.. image:: https://codecov.io/gh/dcopm999/uzsoato_registry/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/dcopm999/uzsoato_registry
 
 SOATO Registry of Uzbekistan
 
 Documentation
 -------------
 
-The full documentation is at https://soato_registry.readthedocs.io.
+The full documentation is at https://uzsoato_registry.readthedocs.io.
 
 Quickstart
 ----------

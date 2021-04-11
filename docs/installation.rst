@@ -4,9 +4,9 @@ Installation
 
 At the command line::
 
-    $ easy_install soato_registry
+    $ easy_install uzsoato_registry
 
 Or, if you have virtualenvwrapper installed::
 
-    $ mkvirtualenv soato_registry
-    $ pip install soato_registry
+    $ mkvirtualenv uzsoato_registry
+    $ pip install uzsoato_registry
