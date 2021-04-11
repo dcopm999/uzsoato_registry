@@ -11,7 +11,7 @@ SOATO Registry
 .. image:: https://codecov.io/gh/dcopm999/soato_registry/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/dcopm999/soato_registry
 
-SOATO Registry
+SOATO Registry of Uzbekistan
 
 Documentation
 -------------
@@ -23,7 +23,7 @@ Quickstart
 
 Install SOATO Registry::
 
-    pip install soato_registry
+    pip install uzsoato_registry
 
 Add it to your `INSTALLED_APPS`:
 
@@ -31,7 +31,7 @@ Add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
-        'soato.apps.SoatoConfig',
+        'soato',
         ...
     )
 
@@ -44,7 +44,7 @@ Add SOATO Registry's URL patterns:
 
     urlpatterns = [
         ...
-        url(r'^', include(soato_urls)),
+        path('', include(soato_urls)),
         ...
     ]
 
