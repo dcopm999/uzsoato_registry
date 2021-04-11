@@ -46,13 +46,13 @@ history = open("HISTORY.rst").read().replace(".. :changelog:", "")
 requirements = open("requirements.txt").readlines()
 
 setup(
-    name="soato_registry",
+    name="uzsoato_registry",
     version=version,
     description="""SOATO Registry""",
     long_description=readme + "\n\n" + history,
     author="Pavel Tanchev",
     author_email="dcopm999@gmail.com",
-    url="https://github.com/dcopm999/soato_registry",
+    url="https://github.com/dcopm999/uzsoato_registry",
     packages=[
         "soato",
     ],
@@ -60,12 +60,14 @@ setup(
     install_requires=requirements,
     license="MIT",
     zip_safe=False,
-    keywords="soato_registry",
+    keywords="uzsoato_registry",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Framework :: Django :: 2.1",
         "Framework :: Django :: 2.2",
+        "Framework :: Django :: 3.0",
         "Framework :: Django :: 3.1",
+        "Framework :: Django :: 3.2",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Natural Language :: English",
