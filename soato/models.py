@@ -25,7 +25,7 @@ class Country(models.Model):
         max_length=30, unique=True, verbose_name=_("Country name russian")
     )
     name_eng = models.CharField(
-        max_length=30, unique=True, verbose_name=_("Country name english")
+        max_length=30, blank=True, verbose_name=_("Country name english")
     )
     slug = models.SlugField(
         max_length=140,
@@ -72,15 +72,15 @@ class Region(models.Model):
         ],
         verbose_name=_("SOATO"),
     )
-    name = models.CharField(max_length=30, unique=True, verbose_name=_("Region name"))
+    name = models.CharField(max_length=100, unique=True, verbose_name=_("Region name"))
     name_cyr = models.CharField(
-        max_length=30, unique=True, verbose_name=_("Region name cyrillic")
+        max_length=100, unique=True, verbose_name=_("Region name cyrillic")
     )
     name_rus = models.CharField(
-        max_length=30, unique=True, verbose_name=_("Region name russian")
+        max_length=100, unique=True, verbose_name=_("Region name russian")
     )
     name_eng = models.CharField(
-        max_length=30, blank=True, verbose_name=_("Region name english")
+        max_length=100, blank=True, verbose_name=_("Region name english")
     )
     slug = models.SlugField(
         max_length=140,
@@ -129,20 +129,18 @@ class District(models.Model):
         verbose_name=_("SOATO"),
     )
     name = models.CharField(
-        max_length=20, unique=True, verbose_name=_("Region district name")
+        max_length=100, unique=True, verbose_name=_("Region district name")
     )
     name_cyr = models.CharField(
-        max_length=30, unique=True, verbose_name=_("Region district name cyrillic")
+        max_length=100, unique=True, verbose_name=_("Region district name cyrillic")
     )
     name_rus = models.CharField(
-        max_length=30, unique=True, verbose_name=_("Region district name russian")
+        max_length=100, unique=True, verbose_name=_("Region district name russian")
     )
     name_eng = models.CharField(
-        max_length=30,
-        unique=True,
+        max_length=100,
         verbose_name=_("Region district name english"),
         blank=True,
-        null=True,
     )
     slug = models.SlugField(
         max_length=140,
@@ -190,15 +188,13 @@ class City(models.Model):
         ],
         verbose_name=_("SOATO"),
     )
-    name = models.CharField(max_length=20, verbose_name=_("City name"))
-    name_cyr = models.CharField(max_length=30, verbose_name=_("City name cyrillic"))
-    name_rus = models.CharField(max_length=30, verbose_name=_("City name russian"))
+    name = models.CharField(max_length=100, verbose_name=_("City name"))
+    name_cyr = models.CharField(max_length=100, verbose_name=_("City name cyrillic"))
+    name_rus = models.CharField(max_length=100, verbose_name=_("City name russian"))
     name_eng = models.CharField(
         max_length=30,
-        unique=True,
         verbose_name=_("City name english"),
         blank=True,
-        null=True,
     )
     slug = models.SlugField(
         max_length=140,
