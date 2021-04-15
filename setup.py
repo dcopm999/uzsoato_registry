@@ -48,7 +48,7 @@ requirements = open("requirements.txt").readlines()
 setup(
     name="uzsoato_registry",
     version=version,
-    description="""SOATO Registry""",
+    description="""SOATO Registry of Uzbekistan""",
     long_description=readme + "\n\n" + history,
     author="Pavel Tanchev",
     author_email="dcopm999@gmail.com",
@@ -60,7 +60,7 @@ setup(
     install_requires=requirements,
     license="MIT",
     zip_safe=False,
-    keywords="uzsoato_registry",
+    keywords=["Uzbekistan", "SOATO", "address", "registry"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Framework :: Django :: 2.1",
@@ -71,6 +71,7 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Natural Language :: English",
+        "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",

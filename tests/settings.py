@@ -29,12 +29,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_celery_beat",
     "rest_framework",
     "soato",
     "soato.test_utils.test_app"
     # if your app has other dependencies that need to be added to the site
     # they should be added here
 ]
+
+CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

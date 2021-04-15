@@ -19,14 +19,30 @@ class CityInline(admin.TabularInline):
 @admin.register(models.Country)
 class CountryAdmin(admin.ModelAdmin):
     inlines = [Regioninline]
-    list_display = ["soato", "name", "name_cyr", "name_rus", "name_eng"]
+    list_display = [
+        "soato",
+        "name",
+        "name_cyr",
+        "name_rus",
+        "name_eng",
+        "created",
+        "updated",
+    ]
     search_fields = ["name", "soato", "name_cyr", "name_rus", "name_eng"]
 
 
 @admin.register(models.Region)
 class RegionAdmin(admin.ModelAdmin):
     inlines = [DistrictInine]
-    list_display = ["soato", "name", "name_cyr", "name_rus", "name_eng"]
+    list_display = [
+        "soato",
+        "name",
+        "name_cyr",
+        "name_rus",
+        "name_eng",
+        "created",
+        "updated",
+    ]
     list_filter = [
         "country__name",
         "country__name_cyr",
@@ -40,7 +56,15 @@ class RegionAdmin(admin.ModelAdmin):
 @admin.register(models.District)
 class DistrictAdmin(admin.ModelAdmin):
     inlines = [CityInline]
-    list_display = ["soato", "name", "name_cyr", "name_rus", "name_eng"]
+    list_display = [
+        "soato",
+        "name",
+        "name_cyr",
+        "name_rus",
+        "name_eng",
+        "created",
+        "updated",
+    ]
     list_filter = [
         "region__name",
         "region__name_cyr",
@@ -53,6 +77,14 @@ class DistrictAdmin(admin.ModelAdmin):
 
 @admin.register(models.City)
 class CityAdmin(admin.ModelAdmin):
-    list_display = ["soato", "name", "name_cyr", "name_rus", "name_eng"]
+    list_display = [
+        "soato",
+        "name",
+        "name_cyr",
+        "name_rus",
+        "name_eng",
+        "created",
+        "updated",
+    ]
     search_fields = ["name", "soato", "name_cyr", "name_rus", "name_eng"]
     autocomplete_fields = ["district"]

@@ -129,17 +129,17 @@ class District(models.Model):
         verbose_name=_("SOATO"),
     )
     name = models.CharField(
-        max_length=100, unique=True, verbose_name=_("Region district name")
+        max_length=100, unique=True, verbose_name=_("District name")
     )
     name_cyr = models.CharField(
-        max_length=100, unique=True, verbose_name=_("Region district name cyrillic")
+        max_length=100, unique=True, verbose_name=_("District name cyrillic")
     )
     name_rus = models.CharField(
-        max_length=100, unique=True, verbose_name=_("Region district name russian")
+        max_length=100, unique=True, verbose_name=_("District name russian")
     )
     name_eng = models.CharField(
         max_length=100,
-        verbose_name=_("Region district name english"),
+        verbose_name=_("District name english"),
         blank=True,
     )
     slug = models.SlugField(
