@@ -32,7 +32,6 @@ INSTALLED_APPS = [
     "django_celery_beat",
     "rest_framework",
     "soato",
-    "soato.test_utils.test_app"
     # if your app has other dependencies that need to be added to the site
     # they should be added here
 ]
