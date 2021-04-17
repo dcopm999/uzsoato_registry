@@ -46,7 +46,7 @@ class Country(models.Model):
         verbose_name_plural = _("Countries")
 
     def get_absolute_url(self):
-        return reverse("soato:country", kwargs={"slug": self.slug})
+        return reverse("soato:country-detail", kwargs={"slug": self.slug})
 
     def __str__(self):
         return self.name
@@ -101,7 +101,7 @@ class Region(models.Model):
         verbose_name_plural = _("Regions")
 
     def get_absolute_url(self):
-        return reverse("soato:region", kwargs={"slug": self.slug})
+        return reverse("soato:region-detail", kwargs={"slug": self.slug})
 
     def __str__(self):
         return f"{self.country}, {self.name}"
@@ -161,7 +161,7 @@ class District(models.Model):
         verbose_name_plural = _("Districts")
 
     def get_absolute_url(self):
-        return reverse("soato:district", kwargs={"slug": self.slug})
+        return reverse("soato:district-detail", kwargs={"slug": self.slug})
 
     def __str__(self):
         return f"{self.region}, {self.name}"
@@ -215,7 +215,7 @@ class City(models.Model):
         verbose_name_plural = _("Cities")
 
     def get_absolute_url(self):
-        return reverse("soato:city", kwargs={"slug": self.slug})
+        return reverse("soato:city-detail", kwargs={"slug": self.slug})
 
     def __str__(self):
         return f"{self.district}, {self.name}"

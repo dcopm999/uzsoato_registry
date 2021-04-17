@@ -8,8 +8,8 @@ if settings.DEBUG:
 else:
     router = SimpleRouter()
 
-router.register("country", views_api.CountryViewSet)
-router.register("region", views_api.RegionViewSet)
-router.register("district", views_api.DistrictViewSet)
-router.register("city", views_api.CityViewSet)
+router.register("country", views_api.CountryViewSet, basename="country")
+router.register("region", views_api.RegionViewSet, basename="region")
+router.register("district", views_api.DistrictViewSet, basename="district")
+router.register("city", views_api.CityViewSet, basename="city")
 urlpatterns = router.urls
