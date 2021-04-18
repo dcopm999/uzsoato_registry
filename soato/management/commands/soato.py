@@ -18,7 +18,6 @@ class Command(BaseCommand):
         parser.add_argument(
             "--csv",
             action="store_true",
-            # dest='delete',
             default=True,
             help="csv type file",
         )
@@ -35,17 +34,18 @@ class Command(BaseCommand):
         for item in items["region"]:
             models.Region.objects.update_or_create(**item)
         for item in items["district"]:
-            try:
-                models.District.objects.update_or_create(**item)
-            except models.District.DoesNotExist:
-                print(item)
+            models.District.objects.update_or_create(**item)
         for item in items["city"]:
             try:
                 models.City.objects.update_or_create(**item)
-            except models.City.DoesNotExist:
-                print(item)
             except models.District.DoesNotExist:
-                print(item)
+                self.stdout.write(
+                    self.style.ERROR(
+                        'City does not exist (name="%s", soato="%s"): skiped'
+                        % (item.get("name"), item.get("soato"))
+                    )
+                )
+        self.stdout.write(self.style.SUCCESS("Successfully"))
 
     def _parse_csv(self):
         result = []

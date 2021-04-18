@@ -8,7 +8,7 @@ from soato import models
 logger = get_task_logger(__name__)
 
 
-@shared_task(bind=True)
+@shared_task(bind=True, ignore_results=True)
 def country_update(self, url: str):
     """
     Celery task for Country update
@@ -27,7 +27,7 @@ def country_update(self, url: str):
                 logger.info("Country created: %s" % obj)
 
 
-@shared_task(bind=True)
+@shared_task(bind=True, ignore_results=True)
 def region_update(self, url: str):
     """
     Celery task for Region update
@@ -46,7 +46,7 @@ def region_update(self, url: str):
                 logger.info("Region created: %s" % obj)
 
 
-@shared_task(bind=True)
+@shared_task(bind=True, ignore_results=True)
 def district_update(self, url):
     """
     Celery task for District update
@@ -65,7 +65,7 @@ def district_update(self, url):
                 logger.info("District created: %s" % obj)
 
 
-@shared_task(bind=True)
+@shared_task(bind=True, ignore_results=True)
 def city_update(self, url):
     """
     Celery task for City update
