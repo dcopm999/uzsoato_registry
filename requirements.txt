@@ -5,3 +5,5 @@ django-celery-beat
 celery
 pytils
 redis
+wget
+openpyxl
