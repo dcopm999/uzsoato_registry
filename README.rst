@@ -1,9 +1,10 @@
+
 =============================
 SOATO Registry
 =============================
 
 .. image:: https://badge.fury.io/py/uzsoato_registry.svg
-    :target: https://badge.fury.io/py/uzsoato_registry
+    :target: https://badge.fury.io/py/uzsoato_registry/
 
 .. image:: https://travis-ci.com/dcopm999/uzsoato_registry.svg?branch=master
     :target: https://travis-ci.com/dcopm999/uzsoato_registry
@@ -31,22 +32,40 @@ Add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
+        'rest_framework',
+        'django_celery_beat',
         'soato',
         ...
     )
 
-Add SOATO Registry's URL patterns:
+
+Add settings for celery:
 
 .. code-block:: python
 
-    from soato import urls as soato_urls
+   CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 
+
+Add settings for static files:
+
+.. code-block:: python
+
+   STATIC_URL = "/static/"
+   STATUC_ROOT = os.path.join(BASE_DIR, "statis")
+   MEDIA_URL = "/media/"
+   MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+Add Tashkent address registry's URL patterns:
+
+.. code-block:: python
 
     urlpatterns = [
         ...
-        path('', include(soato_urls)),
+	path('soato/', include('soato.urls', namespace="soato"),
         ...
     ]
+
 
 Features
 --------
