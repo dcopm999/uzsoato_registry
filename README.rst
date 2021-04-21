@@ -1,9 +1,10 @@
+
 =============================
 SOATO Registry
 =============================
 
 .. image:: https://badge.fury.io/py/uzsoato_registry.svg
-    :target: https://badge.fury.io/py/uzsoato_registry
+    :target: https://badge.fury.io/py/uzsoato_registry/
 
 .. image:: https://travis-ci.com/dcopm999/uzsoato_registry.svg?branch=master
     :target: https://travis-ci.com/dcopm999/uzsoato_registry
