@@ -63,9 +63,9 @@ setup(
     keywords=["Uzbekistan", "SOATO", "address", "registry"],
     classifiers=[
         "Development Status :: 3 - Alpha",
-        "Framework :: Django :: 2.2.20",
-        "Framework :: Django :: 3.0.14",
-        "Framework :: Django :: 3.1.8",
+        "Framework :: Django :: 2.2",
+        "Framework :: Django :: 3.0",
+        "Framework :: Django :: 3.1",
         "Framework :: Django :: 3.2",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
